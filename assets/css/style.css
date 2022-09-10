@@ -1,0 +1,73 @@
+h1 {
+    text-align: center;
+    background-image: linear-gradient(to right, #3b6ec4, #230455);
+    color: white;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#search {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#input {
+    width:350px;
+    height: 50px;
+    margin-bottom: 20px;
+    text-indent: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: grey;
+}
+
+#buttonSearch {
+    width: 350px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    background-color: #5aa2e9;
+}
+
+#border {
+    border: 1px solid black;
+}
+
+#uvIndex {
+    border: 1px solid darkgreen;
+    background-color: darkgreen;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    width: 40px;
+    position: relative;
+    left: 6px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.uvContainer {
+    display: flex;
+    margin: 20px 0 10px 5px; 
+}
+
+#city {
+    margin: 5px;
+}
+
+#temp {
+    margin: 20px 0 0 5px; 
+}
+
+#wind {
+    margin: 20px 0 0 5px; 
+}
+
+#humidity {
+    margin: 20px 0 0px 5px; 
+}
