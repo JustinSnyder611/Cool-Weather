@@ -6,29 +6,30 @@ h1 {
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
 }
 
 #search {
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    left: 10px
 }
 
 #input {
-    width:350px;
+    width:450px;
     height: 50px;
-    margin-bottom: 20px;
     text-indent: 10px;
     font-size: 20px;
     border-radius: 5px;
     border-color: grey;
+    margin-bottom: 20px;
 }
 
 #buttonSearch {
-    width: 350px;
+    width: 450px;
     height: 50px;
     border-radius: 5px;
+    border-color: grey;
     color: white;
     background-color: #5aa2e9;
 }
@@ -38,22 +39,24 @@ h2 {
 }
 
 #uvIndex {
-    border: 1px solid darkgreen;
-    background-color: darkgreen;
+    border: 1px solid #157e51;
+    background-color: #157e51;
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    width: 40px;
+    width: 60px;
     position: relative;
     left: 6px;
-    font-size: 12px;
+    font-size: 15px;
+    height: 27px;
+    line-height: 27px;
     text-align: center;
-
 }
 
 .uvContainer {
     display: flex;
-    margin: 20px 0 10px 5px; 
+    margin: 30px 0 15px 5px; 
+    font-size: 25px;
 }
 
 #city {
@@ -61,13 +64,76 @@ h2 {
 }
 
 #temp {
-    margin: 20px 0 0 5px; 
+    margin: 25px 0 0 5px; 
+    font-size: 25px;
 }
 
 #wind {
-    margin: 20px 0 0 5px; 
+    margin: 30px 0 0 5px; 
+    font-size: 25px;
 }
 
 #humidity {
-    margin: 20px 0 0px 5px; 
+    margin: 30px 0 0px 5px; 
+    font-size: 25px;
 }
+
+
+h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 15px;
+    color:black;
+}
+
+#line {
+    border-top: 2px solid grey;
+    position: relative;
+    top: 20px;
+    width: 450px;
+    margin-bottom: 100px;
+}
+
+.pastCity {
+    height: 40px;
+    width: 450px;
+    background-color: #b7b7b7;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.forecastBorder {
+    background-color: #33475a;
+    border: 1px solid black;
+    height: 250px;
+    width: 240px;
+    color: white;
+}
+
+.forecastDate {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px
+}
+
+.forecastSymbol {
+    font-size: 40px;
+    margin: 9px;
+}
+
+.forecastTemp {
+    font-size: 25px;
+    margin: 20px 0 0 5px;
+}
+
+.forecastWind {
+    font-size: 25px;
+    margin: 20px 0 0 5px;
+}
+
+.forecastHumidity {
+    font-size: 25px;
+    margin: 20px 0 0 5px;
+}
+
