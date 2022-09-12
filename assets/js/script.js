@@ -21,7 +21,7 @@ function historyButton() {
 
 //This function takes the input from the 'input' tag and puts it into this function to get the weather data
 function getWeather(locationInput) {
-    fetch('http://api.openweathermap.org/data/2.5/forecast?q=' + locationInput + '&units=imperial&APPID=00cc8e4996e11fc0839f1509ee13059a') 
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + locationInput + '&units=imperial&APPID=00cc8e4996e11fc0839f1509ee13059a') 
   
    .then(function (response) {
        return response.json();
@@ -52,7 +52,7 @@ function getWeather(locationInput) {
        document.getElementById('symbol3').src = './assets/images/' + data.list[24].weather[0].icon + '.png';
        document.getElementById('temp3').innerHTML = 'Temp: ' + data.list[24].main.temp + '°F';
        document.getElementById('wind3').innerHTML = 'Wind: ' + data.list[24].wind.speed + ' MPH';
-       document.getElementById('humidity').innerHTML = 'Humidity: ' + data.list[24].main.humidity + '%';
+       document.getElementById('humidity3').innerHTML = 'Humidity: ' + data.list[24].main.humidity + '%';
 
        let pDate4 = dayjs.unix(data.list[32].dt).format('M/DD/YYYY')
        document.getElementById('date4').innerHTML = pDate4
