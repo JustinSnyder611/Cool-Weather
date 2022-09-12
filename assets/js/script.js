@@ -7,6 +7,8 @@ window.onload = function() {
     if (localStorage.getItem('storedCity') == null) {
         locationInput = 'Austin'
         getWeather(locationInput)
+        localStorage.setItem('storedCity', 'Austin')
+        return
     }
     locationInput = localStorage.getItem('storedCity')
     getWeather(locationInput)
