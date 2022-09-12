@@ -17,76 +17,69 @@
         <div class="col-3" id="search">
             <h2>Search for a City:</h2>
             <input type="text" id="input" placeholder="Austin">
-            <button onclick="getWeather()" id="buttonSearch">Search</button>
+            <button onclick="getWeather(document.getElementById('input').value)" id="buttonSearch">Search</button>
             <div id="line">
-                    <button class="pastCity">Austin</button>
-                    <button class="pastCity">Chicago</button>
-                    <button class="pastCity">New</button>
-                    <button class="pastCity">orland</button>
-                    <button class="pastCity">sand</button>
-                    <button class="pastCity">seattle</button>
-                    <button class="pastCity">denver</button>
-                    <button class="pastCity">atlanta</button>
+                <button class="pastCity" id="cityButton" onclick="historyButton()">Dallas</button>
             </div>
         </div>
 
         <div class="col-9">
             <div id="border">
                 <div id="cityContainer">
-                    <h2 id="city">Atlanta (9/10/2022)</h2><img id="icon" src="./assets/images/09d.png">
+                    <h2 id="city"></h2><img id="icon" src="">
                 </div>
-                <p id="temp">Temp: 74.01°F</p>
-                <p id="wind">Wind: 6.67 MPH</p>
-                <p id="humidity">Humidity: 46%</p>
+                <p id="temp"></p>
+                <p id="wind"></p>
+                <p id="humidity"></p>
                 <div class="uvContainer">
-                    <p>UV Index: <p id="uvIndex"> 0.47</p></p>
+                    <p>UV Index: <p id="uvIndex">0.47</p>
                 </div>
             </div>
             <h3>5-Day Forecast:</h3>
             <div class="row">
                 <div id="day1" class="col">
                     <div class="forecastBorder">
-                        <p class="forecastDate" id="date1">3/31/2021</p>
-                        <img class="forecastSymbol" id="symbol1" src="./assets/images/10d.png">
-                        <p class="forecastTemp" id="temp1">Temp: 73.72 °F</p>
-                        <p class="forecastWind" id="wind1">Wind: 9.53 MPH</p>
-                        <p class="forecastHumidity" id="humidity1">Humidity: 66%</p>
+                        <p class="forecastDate" id="date1"></p>
+                        <img class="forecastSymbol" id="symbol1" src="">
+                        <p class="forecastTemp" id="temp1"></p>
+                        <p class="forecastWind" id="wind1"></p>
+                        <p class="forecastHumidity" id="humidity1"></p>
                     </div>
                 </div>
                 <div id="day2" class="col">
                     <div class="forecastBorder">
-                        <p class="forecastDate" id="date2">3/31/2021</p>
-                        <img class="forecastSymbol" id="symbol2" src="./assets/images/01d.png">
-                        <p class="forecastTemp" id="temp2">Temp: 73.72°F</p>
-                        <p class="forecastWind" id="wind2">Wind:9.53 MPH</p>
-                        <p class="forecastHumidity" id="humidity2">Humidity: 66%</p>
+                        <p class="forecastDate" id="date2"></p>
+                        <img class="forecastSymbol" id="symbol2" src="">
+                        <p class="forecastTemp" id="temp2"></p>
+                        <p class="forecastWind" id="wind2"></p>
+                        <p class="forecastHumidity" id="humidity2"></p>
                     </div>
                </div>
                <div id="day3" class="col">
                     <div class="forecastBorder">
-                        <p class="forecastDate" id="date3">3/31/2021</p>
-                        <img class="forecastSymbol" id="symbol3" src="./assets/images/01d.png">
-                        <p class="forecastTemp" id="temp3">Temp: 73.72°F</p>
-                        <p class="forecastWind" id="wind3">Wind:9.53 MPH</p>
-                        <p class="forecastHumidity" id="humidity3">Humidity: 66%</p>
+                        <p class="forecastDate" id="date3"></p>
+                        <img class="forecastSymbol" id="symbol3" src="">
+                        <p class="forecastTemp" id="temp3"></p>
+                        <p class="forecastWind" id="wind3"></p>
+                        <p class="forecastHumidity" id="humidity3"></p>
                     </div>
                 </div>
                 <div id="day4" class="col">
                     <div class="forecastBorder">
-                        <p class="forecastDate" id="date4">3/31/2021</p>
-                        <img class="forecastSymbol" id="symbol4" src="./assets/images/01d.png">
-                        <p class="forecastTemp" id="temp4">Temp: 73.72°F</p>
-                        <p class="forecastWind" id="wind4">Wind:9.53 MPH</p>
-                        <p class="forecastHumidity" id="humidity4">Humidity: 66%</p>
+                        <p class="forecastDate" id="date4"></p>
+                        <img class="forecastSymbol" id="symbol4" src="">
+                        <p class="forecastTemp" id="temp4"></p>
+                        <p class="forecastWind" id="wind4"></p>
+                        <p class="forecastHumidity" id="humidity4"></p>
                     </div>
                 </div>
                 <div id="day5" class="col">
                     <div class="forecastBorder">
-                        <p class="forecastDate" id="date5">3/31/2021</p>
-                        <img class="forecastSymbol" id="symbol5" src="./assets/images/01d.png">
-                        <p class="forecastTemp" id="temp5">Temp: 73.72°F</p>
-                        <p class="forecastWind" id="wind5">Wind:9.53 MPH</p>
-                        <p class="forecastHumidity" id="humidity5">Humidity: 66%</p>
+                        <p class="forecastDate" id="date5"></p>
+                        <img class="forecastSymbol" id="symbol5" src="">
+                        <p class="forecastTemp" id="temp5"></p>
+                        <p class="forecastWind" id="wind5"></p>
+                        <p class="forecastHumidity" id="humidity5"></p>
                     </div>
                </div>
             </div>

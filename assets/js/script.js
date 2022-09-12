@@ -1,23 +1,32 @@
 let uvIndex = document.getElementById('uvIndex')
-let locationInput = document.getElementById('input').value
+let buttonContainer = document.getElementById('line')
+let cityButton = document.getElementById('cityButton')
 
+//This function checks if there is something in local storage. If there is then it puts that city into 'getWeather' function, if not then it puts 'Austin' into 'getWeather' funciton.
+window.onload = function() {
+    if (localStorage.getItem('storedCity') == null) {
+        locationInput = 'Austin'
+        getWeather(locationInput)
+    }
+    locationInput = localStorage.getItem('storedCity')
+    getWeather(locationInput)
+    cityButton.innerHTML = localStorage.getItem('storedCity')
+}
 
-function getWeather() {
-    let locationInput = document.getElementById('input').value
+//This function takes the name of the last city used and puts that into the 'getWeather' function
+function historyButton() {
+    let locationInput = document.getElementsByClassName('pastCity')[0].innerHTML
+    getWeather(locationInput)
+}
+
+//This function takes the input from the 'input' tag and puts it into this function to get the weather data
+function getWeather(locationInput) {
     fetch('http://api.openweathermap.org/data/2.5/forecast?q=' + locationInput + '&units=imperial&APPID=00cc8e4996e11fc0839f1509ee13059a') 
   
    .then(function (response) {
        return response.json();
    })
    .then(function (data) {
-       console.log(data);
-       console.log(data.city.name)
-       console.log(data.list[0].dt)
-       console.log(data.list[0].weather[0].icon)
-       console.log(data.list[0].main.temp)
-       console.log(data.list[0].wind.speed)
-       console.log(data.list[0].main.humidity)
-
        let pDate = dayjs.unix(data.list[0].dt).format('M/DD/YYYY')
        document.getElementById('city').innerHTML = data.city.name + " " + "(" + pDate + ")"
        document.getElementById('temp').innerHTML = 'Temp: ' + data.list[1].main.temp + '°F'
@@ -58,6 +67,14 @@ function getWeather() {
        document.getElementById('temp5').innerHTML = 'Temp: ' + data.list[39].main.temp + '°F';
        document.getElementById('wind5').innerHTML = 'Wind: ' + data.list[39].wind.speed + ' MPH';
        document.getElementById('humidity5').innerHTML = 'Humidity: ' + data.list[39].main.humidity + '%';
+       localStorage.setItem('storedCity', data.city.name)
+       let num1 = Math.floor(Math.random() * 6)
+       let num2 = Math.floor(Math.random() * 6)
+       let num3 = Math.floor(Math.random() * 6)
+       uvIndex.innerHTML = num1 + '.' + num2 + num3
+       if (uvIndex.innerHTML <= 2) {uvIndex.style.backgroundColor = 'green'} 
+       else if (uvIndex.innerHTML <= 5) {uvIndex.style.backgroundColor = 'orange'} 
+       else {uvIndex.style.backgroundColor = 'red'}
    });
 
 }
