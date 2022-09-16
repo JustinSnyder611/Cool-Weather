@@ -31,6 +31,7 @@ function getWeather(locationInput) {
    .then(function (data) {
        let pDate = dayjs.unix(data.list[0].dt).format('M/DD/YYYY')
        document.getElementById('city').innerHTML = data.city.name + " " + "(" + pDate + ")"
+       document.getElementById('icon').src = './assets/images/' + data.list[1].weather[0].icon + '.png'
        document.getElementById('temp').innerHTML = 'Temp: ' + data.list[1].main.temp + '°F'
        document.getElementById('wind').innerHTML = 'Wind: ' + data.list[1].wind.speed + ' MPH'
        document.getElementById('humidity').innerHTML = 'Humidity: ' + data.list[1].main.humidity + '%'
